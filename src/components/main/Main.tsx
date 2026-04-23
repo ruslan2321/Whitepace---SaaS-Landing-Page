@@ -1,133 +1,283 @@
-import PlateImg1 from "/images/PlateImg1.png";
-import PlateImg2 from "/images/PlateImg2.png";
-import PlateImg3 from "/images/PlateImg3.png";
-import PlateImg4 from "/images/PlateImg4.png";
-import bgImg1 from "/images/bgimg1.png";
-import planet from "/images/planet.png";
 import "./style.scss";
-import { UI_Plate } from "../UI/Plate/Plate";
+import { UI_Plate } from "../UI/Plate/PlateDefault";
 import { UI_Button } from "../UI/Button/Button";
 import ArrowRight from "/svg/ArrowRight.svg";
 import { UI_Cards } from "../UI/Cards/Cards";
+import { UI_PlateDown } from "../UI/Plate/PlateDown/PlateDown";
 
 export const Main = () => {
   return (
     <>
       <div>
         <UI_Plate
-          label="Get More Done with whitepace"
-          description="Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks"
-          img={PlateImg1}
-          bgimg={bgImg1}
-          color="white"
-          content={
-            <UI_Button
-              icon={ArrowRight}
-              bg={"blue"}
-              size="md"
-              text="Try Whitepace free"
-            />
-          }
+          plateProps={{
+            label: "Get More Done with whitepace",
+            description:
+              "Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks",
+            img: "/images/PlateImg1.png",
+            bgimg: "/images/bgimg1.png",
+            color: "white",
+            content: (
+              <UI_Button
+                icon={ArrowRight}
+                bg={"blue"}
+                size="md"
+                text="Try Whitepace free"
+              />
+            ),
+          }}
         />
         <UI_Plate
-          label="Project Management"
-          description="Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note."
-          img={PlateImg2}
-          content={
-            <UI_Button
-              size="lg"
-              bg="blue"
-              text="Get Started"
-              icon={ArrowRight}
-            />
-          }
+          plateProps={{
+            label: "Project Management",
+            description:
+              "Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.",
+            img: "/images/PlateImg2.png",
+            content: (
+              <UI_Button
+                size="lg"
+                bg="blue"
+                text="Get Started"
+                icon={ArrowRight}
+              />
+            ),
+          }}
         />
         <UI_Plate
-          label="Work together"
-          description="With whitepace, share your notes with your colleagues and collaborate on them.
-You can also publish a note to the internet and share the URL with others.
-"
-          img={planet}
+          plateProps={{
+            label: "Work together",
+            description:
+              "With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.",
+            img: "/images/planet.png",
+            content: (
+              <UI_Button
+                size="lg"
+                bg="blue"
+                text="Try it now"
+                icon={ArrowRight}
+              />
+            ),
+          }}
           position="left"
-          content={
-            <UI_Button
-              size="lg"
-              bg="blue"
-              text="Try it now"
-              icon={ArrowRight}
-            />
-          }
         />
         <UI_Plate
-          label="Use as Extension"
-          description="Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.
-"
-          content={
-            <UI_Button
-              size="lg"
-              bg="blue"
-              text="Get Started"
-              icon={ArrowRight}
-            />
-          }
-          img={PlateImg3}
-          bg="darkblue"
+          plateProps={{
+            label: "Use as Extension",
+            description:
+              "Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.",
+            img: "/images/PlateImg3.png",
+            content: (
+              <UI_Button
+                size="lg"
+                bg="blue"
+                text="Get Started"
+                icon={ArrowRight}
+              />
+            ),
+            bg: "darkblue",
+          }}
         />
         <UI_Plate
-          label="Customise it
-to your needs"
+          plateProps={{
+            label: "Customise it to your needs",
+            description:
+              "Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.",
+            img: "/images/PlateImg4.png",
+            content: (
+              <UI_Button
+                size="lg"
+                bg="blue"
+                text="Let’s Go"
+                icon={ArrowRight}
+              />
+            ),
+            bg: "white",
+          }}
           position="left"
-          description="Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API."
-          content={
-            <UI_Button size="lg" bg="blue" text="Let’s Go" icon={ArrowRight} />
-          }
-          img={PlateImg4}
         />
-        <UI_Plate
-          label="Customise it
-to your needs"
-          position="down"
-          description="Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API."
-          content={
-            <UI_Button size="lg" bg="blue" text="Let’s Go" icon={ArrowRight} />
-          }
-          img={PlateImg4}
-        />
-        <div className="flex justify-center flex-col items-center gap-[60px]">
-          <h1 className="text-[72px] font-bold">Choose Your Plan</h1>
-          <p className="text-center font-[200] w-[600px]">
-            Whether you want to get organized, keep your personal life on track,
-            or boost workplace productivity, Evernote has the right plan for
-            you.
-          </p>
-          <div className="flex gap-[32px]">
-            <UI_Cards
-              title="Free"
-              description="Capture ideas and find them quickly"
-              lable="$0"
-              bg="white"
-              size="md"
-              contentfooter={<UI_Button size="sm" bg="gold" text="Let’s Go" />}
-            />
-            <UI_Cards
-              title="Personal"
-              description="Capture ideas and find them quickly"
-              lable="$0"
-              bg="darkblue"
-              size="lg"
-              contentfooter={<UI_Button size="sm" bg="blue" text="Let’s Go" />}
-            />
-            <UI_Cards
-              title="Free"
-              description="Capture ideas and find them quickly"
-              lable="$0"
-              bg="white"
-              size="md"
-              contentfooter={<UI_Button size="sm" bg="gold" text="Let’s Go" />}
-            />
-          </div>
-        </div>
 
+        <UI_PlateDown
+          plateProps={{
+            label: "Choose Your Plan",
+            description:
+              " Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.",
+            bg: "white",
+            content: (
+              <div className="flex gap-[32px]">
+                <UI_Cards
+                  title="Free"
+                  description="Capture ideas and find them quickly"
+                  lable="$0"
+                  bg="white"
+                  size="md"
+                  content={
+                    <ul>
+                      <li>
+                        <p>Sync unlimited devices</p>
+                      </li>
+                      <li>
+                        <p>10 GB monthly uploads</p>
+                      </li>
+                      <li>
+                        <p>200 MB max. note size</p>
+                      </li>
+                      <li>
+                        <p>Customize Home dashboard and access extra widgets</p>
+                      </li>
+                      <li>
+                        <p>Connect primary Google Calendar account</p>
+                      </li>
+                      <li>
+                        <p>
+                          Add due dates, reminders, and notifications to your
+                          tasks
+                        </p>
+                      </li>
+                    </ul>
+                  }
+                  contentfooter={
+                    <UI_Button size="sm" bg="gold" text="Let’s Go" />
+                  }
+                />
+                <UI_Cards
+                  title="Personal"
+                  content={
+                    <ul>
+                      <li>
+                        <p>Sync unlimited devices</p>
+                      </li>
+                      <li>
+                        <p>10 GB monthly uploads</p>
+                      </li>
+                      <li>
+                        <p>200 MB max. note size</p>
+                      </li>
+                      <li>
+                        <p>Customize Home dashboard and access extra widgets</p>
+                      </li>
+                      <li>
+                        <p>Connect primary Google Calendar account</p>
+                      </li>
+                      <li>
+                        <p>
+                          Add due dates, reminders, and notifications to your
+                          tasks
+                        </p>
+                      </li>
+                    </ul>
+                  }
+                  description="Capture ideas and find them quickly"
+                  lable="$0"
+                  bg="darkblue"
+                  size="lg"
+                  contentfooter={
+                    <UI_Button size="sm" bg="blue" text="Let’s Go" />
+                  }
+                />
+                <UI_Cards
+                  content={
+                    <ul>
+                      <li>
+                        <p>Sync unlimited devices</p>
+                      </li>
+                      <li>
+                        <p>10 GB monthly uploads</p>
+                      </li>
+                      <li>
+                        <p>200 MB max. note size</p>
+                      </li>
+                      <li>
+                        <p>Customize Home dashboard and access extra widgets</p>
+                      </li>
+                      <li>
+                        <p>Connect primary Google Calendar account</p>
+                      </li>
+                      <li>
+                        <p>
+                          Add due dates, reminders, and notifications to your
+                          tasks
+                        </p>
+                      </li>
+                    </ul>
+                  }
+                  title="Free"
+                  description="Capture ideas and find them quickly"
+                  lable="$0"
+                  bg="white"
+                  size="md"
+                  contentfooter={
+                    <UI_Button size="sm" bg="gold" text="Let’s Go" />
+                  }
+                />
+              </div>
+            ),
+          }}
+          position="down"
+        />
+        <UI_PlateDown
+          plateProps={{
+            label: "Your work, everywhere you are",
+            description:
+              "Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!",
+            content: (
+              <UI_Button
+                size="lg"
+                bg="blue"
+                text="Try Taskey"
+                icon={ArrowRight}
+              />
+            ),
+            bg: "darkblue",
+          }}
+        />
+        <UI_Plate
+          plateProps={{
+            label: "100% your data",
+            description:
+              "The app is open source and your notes are saved to an open format, so you ll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but ",
+            content: (
+              <UI_Button
+                size="lg"
+                bg="blue"
+                text="Read more"
+                icon={ArrowRight}
+              />
+            ),
+            img: "/images/Map.png",
+          }}
+        />
+        <UI_PlateDown
+          plateProps={{
+            label: "Our sponsors",
+            content: (
+              <div className="flex justify-center gap-[10%]">
+                <img src="/public/svg/Apple.svg" />
+                <img src="/public/svg/Microsoft.svg" />
+                <img src="/public/svg/Slack.svg" />
+                <img src="/public/svg/Google.svg" />
+              </div>
+            ),
+          }}
+        />
+        <UI_Plate
+          plateProps={{
+            label: "Work with Your Favorite Apps Using whitepace",
+            description:
+              "Whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.",
+            content: (
+              <UI_Button
+                size="lg"
+                bg="blue"
+                text="Read more"
+                icon={ArrowRight}
+              />
+            ),
+            bgimg: "/images/bgimg1.png",
+            img: "/images/Apps.png",
+            color: "white",
+          }}
+          position="left"
+        />
       </div>
     </>
   );
