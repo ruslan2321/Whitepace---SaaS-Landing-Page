@@ -1,0 +1,56 @@
+.ui-plate {
+  padding: 140px 0px 100px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  .img-container {
+    max-width: 824px;
+    max-height: 549px;
+    img {
+      width: 500px;
+    }
+  }
+}
+
+.ui-plate-position {
+  &-left {
+    order: 2;
+  }
+  &-right {
+    order: 2;
+  }
+}
+.ui-plate-color {
+  &-white {
+    color: white;
+  }
+  &-black {
+    color: #043873;
+  }
+}
+.plate-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  width: 35vw;
+}
+.plate-content-text {
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  h1 {
+    font-size: 64px;
+    line-height: 50px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+.ui-plate-bg {
+  &-darkblue {
+    background-color: #043873;
+    color: white;
+  }
+}

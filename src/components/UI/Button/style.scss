@@ -1,0 +1,44 @@
+.ui-button {
+  border: none;
+  justify-content: space-between;
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  transition: 0.5s all;
+}
+.ui-button-bg {
+  &-yellow {
+    background-color: #ffe492;
+    color: #043873;
+  }
+  &-blue {
+    background-color: #a7cefc;
+    color: #ffffff;
+  }
+  &-white {
+    background-attachment: #ffffff;
+  }
+  &-black {
+    background-color: #212529;
+  }
+  &-gold {
+    background-color: white;
+    border: 1px solid #ffe492;
+  }
+}
+.ui-button-size {
+  &-lg {
+    padding: 16px 40px;
+  }
+  &-md {
+    padding: 13px 24px;
+  }
+  &-sm {
+     padding: 13px 24px;
+     justify-content: center;
+  }
+}
+ .ui-button:hover{
+    cursor: pointer;
+    transform:scale(1.1) ;
+  }

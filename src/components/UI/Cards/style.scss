@@ -1,0 +1,63 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 25px;
+}
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  h3 {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
+.card-body {
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-left: 28px;
+    font-size: 12px;
+    list-style-image: url(/public/images/IocnLis.png);
+  }
+}
+
+.card-bg {
+  &-white {
+    border: 1px solid #ffe492 !important;
+  }
+  &-darkblue {
+    border-color: inherit;
+    background-color: #043873;
+    color: white;
+  }
+}
+.card-bg-darkblue:has(.card-header){
+   h1{
+    color: #ffe492;
+   }
+}
+.card-bg-darkblue:has(.card-body){
+    ul{
+         list-style-image: url(/public/images/IconListGold.png) !important;
+    }
+     
+}
+
+.cards-size {
+  &-lg {
+    padding: 80px 44px;
+    z-index: 100px;
+  }
+  &-md {
+    padding: 40px 44px;
+    width: 427px;
+    height: 95vh;
+  }
+}
