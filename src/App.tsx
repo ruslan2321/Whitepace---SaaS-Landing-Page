@@ -1,4 +1,5 @@
 
+import { Footer } from './components/footer/footer'
 import { Header } from './components/header'
 import { Main } from './components/main/Main'
 
@@ -7,6 +8,7 @@ export default function App() {
    <>
     <Header/>
     <Main/>
+    <Footer/>
    </>
   )
 }

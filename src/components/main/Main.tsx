@@ -4,6 +4,7 @@ import { UI_Button } from "../UI/Button/Button";
 import ArrowRight from "/svg/ArrowRight.svg";
 import { UI_Cards } from "../UI/Cards/Cards";
 import { UI_PlateDown } from "../UI/Plate/PlateDown/PlateDown";
+import { UI_CardPeople } from "../UI/Cards/CardPeople";
 
 export const Main = () => {
   return (
@@ -95,7 +96,6 @@ export const Main = () => {
           }}
           position="left"
         />
-
         <UI_PlateDown
           plateProps={{
             label: "Choose Your Plan",
@@ -277,6 +277,70 @@ export const Main = () => {
             color: "white",
           }}
           position="left"
+        />
+        <UI_PlateDown
+          plateProps={{
+            label: "What Our Clients Says",
+            content: (
+              <div className="flex flex-col gap-[60px] items-center">
+                <div className="flex gap-[20px]">
+                  <UI_CardPeople
+                    img="/public/images/ImgHeaderPeople1.png"
+                    bg="white"
+                    name="Oberon Shaw, MCH"
+                    descriptionPeopl="Head of Talent Acquisition, North America"
+                    description="Whitepate is designed as a collaboration tool for businesses that is a full project management solution."
+                    avatar="/public/images/Avater.png"
+                  />
+                  <UI_CardPeople
+                    img="/public/images/ImgHeader2.png"
+                    bg="sky-blue"
+                    name="Oberon Shaw, MCH"
+                    descriptionPeopl="Head of Talent Acquisition, North America"
+                    description="Whitepate is designed as a collaboration tool for businesses that is a full project management solution."
+                    avatar="/public/images/Avater2.png"
+                  />
+                  <UI_CardPeople
+                    img="/public/images/ImgHeader2.png"
+                    bg="sky-blue"
+                    name="Oberon Shaw, MCH"
+                    descriptionPeopl="Head of Talent Acquisition, North America"
+                    description="Whitepate is designed as a collaboration tool for businesses that is a full project management solution."
+                    avatar="/public/images/Avater3.png"
+                  />
+                </div>
+                <div className="flex gap-[12px]">
+                  <div className="w-[12px] h-[12px] bg-[#4F9CF9] rounded-2xl"></div>
+                  <div className="w-[12px] h-[12px] bg-[#043873] rounded-2xl"></div>
+                  <div className="w-[12px] h-[12px] bg-[#4F9CF9] rounded-2xl"></div>
+                </div>
+              </div>
+            ),
+          }}
+        />
+        <UI_PlateDown
+          plateProps={{
+            label: "Try Whitepace today",
+            description:
+              "Get started for free. Add your whole team as your needs grow.",
+            bg: "darkblue",
+            content: (
+              <div className="flex flex-col gap-[40px]">
+                <UI_Button
+                  size="lg"
+                  bg="blue"
+                  text="Read more"
+                  icon={ArrowRight}
+                />
+                <p className="font-300">On a big team? Contact sales</p>
+                <div className="flex gap-[40px]">
+                  <img src="/public/svg/Apple-white.svg" alt="" />
+                  <img src="/public/svg/Microsoft-white.svg" alt="" />
+                  <img src="/public/svg/Android.svg" alt="" />
+                </div>
+              </div>
+            ),
+          }}
         />
       </div>
     </>

@@ -1,0 +1,37 @@
+footer{
+    padding: 70px 150px;
+    background-color: #043873;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.logo-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+  }
+}
+.footer-top-content{
+    display: grid;
+    grid-template-columns: repeat(5, 13%);
+   
+    justify-items: center;
+    gap: 100px;
+    ul{
+        line-height: 40px;
+        li:hover{
+            color: #FFE492;
+            cursor: pointer;
+            font-weight: 300;
+        }
+    }
+}
+.footer-botom-content{
+    display: flex;
+    gap: 60px;
+}

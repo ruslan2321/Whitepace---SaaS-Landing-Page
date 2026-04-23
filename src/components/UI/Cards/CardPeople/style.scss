@@ -1,0 +1,44 @@
+.cardspeople {
+  width: 471px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 60px;
+  padding: 60px 40px;
+  
+}
+.line {
+  width: 100%;
+  border: 1px solid black;
+  height: 2px;
+}
+
+.card-body-people {
+  display: flex;
+  align-items: end;
+  gap: 42px;
+  height: 100%;
+}
+.card-people-bg {
+  &-white {
+    box-shadow: 0px 0px 7px 0px gray;
+  }
+  &-sky-blue {
+    background-color: #4f9cf9 !important;
+  }
+}
+
+.card-people-bg-sky-blue:has(.card-body-people) {
+  h1 {
+    color: #043873;
+  }
+  p {
+    color: white;
+  }
+}
+.card-people-bg-sky-blue:has(.line) {
+  border:1px solid white !important;
+}
+
